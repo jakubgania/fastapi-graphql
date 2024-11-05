@@ -42,10 +42,14 @@ async def github_profile(username: str):
     query = """
     query($username: String!) {
         user(login: $username) {
+            id
             login
+            avatarUrl
+            url
             name
             bio
-            avatarUrl
+            twitterUsername
+            websiteUrl
             followers {
                 totalCount
             }
